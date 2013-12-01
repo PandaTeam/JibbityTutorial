@@ -1,11 +1,7 @@
 package tutorial.items;
 
-import tutorial.lib.ModInfo;
-import tutorial.lib.Names;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
@@ -60,12 +56,30 @@ return false;
 }
 return false;
 }
-
+/**
+* Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if
+* sword
+*/
 @Override
-@SideOnly(Side.CLIENT)
-public void registerIcons(IconRegister icon) {
-	itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + Names.tutTool_unlocalizedName);
-
+public float getStrVsBlock(ItemStack itemstack, Block block)
+{
+return block != null && (block.blockMaterial == Material.wood || block.blockMaterial == Material.plants || block.blockMaterial == Material.vine ||
+block.blockMaterial == Material.iron || block.blockMaterial == Material.anvil || block.blockMaterial == Material.rock) ?
+this.efficiencyOnProperMaterial :
+super.getStrVsBlock(itemstack, block);
 }
 
+public boolean canHarvestBlock(Block par1Block, ItemStack itemStack)
+{
+return this.canHarvestBlock(par1Block);
 }
+
+/**
+* Returns if the item (tool) can harvest results from the block type.
+*/
+public boolean canHarvestBlock(Block par1Block)
+{
+return true;
+}
+}
+

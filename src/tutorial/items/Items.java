@@ -7,7 +7,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 public static Item item;
-
 public static Item tool;
 
 public static void init() {

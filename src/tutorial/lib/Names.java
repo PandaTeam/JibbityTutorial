@@ -6,7 +6,7 @@ public static final String tutItem_unlocalizedName = "tutorialItem";
 public static final String tutItem_name = "Tutorial Item";
 
 public static final String tutTool_unlocalizedName = "tutorialTool";
-public static final String tutTool_name = "Tutorial Item";
+public static final String tutTool_name = "Tutorial Tool";
 
 
 // blocks

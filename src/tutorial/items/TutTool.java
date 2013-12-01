@@ -11,15 +11,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class TutTool extends ItemOmniTool {
 public TutTool(int id, EnumToolMaterial material) {
 	super(id, material);
-	setUnlocalizedName(Names.tutTool_unlocalizedName);
-	setCreativeTab(CreativeTabs.tabTools);
+	this.setUnlocalizedName(Names.tutTool_unlocalizedName);
+	this.setCreativeTab(CreativeTabs.tabTools);
 	setMaxStackSize(1);
 	}
 
 @Override
 @SideOnly(Side.CLIENT)
 public void registerIcons(IconRegister icon) {
-	itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + getUnlocalizedName());
-}
+	itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + Names.tutTool_unlocalizedName);
+
+	}
 
 }
