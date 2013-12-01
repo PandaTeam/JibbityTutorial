@@ -4,5 +4,6 @@ package tutorial.items;
 
 public class Ids {
 public static final int tutItem = 16000;
+public static final int tutTool = 16001;
 
 }
