@@ -17,7 +17,7 @@ public TutItem(int id) {
 @Override
 @SideOnly(Side.CLIENT)
 public void registerIcons(IconRegister icon) {
-	itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + "tutIcon");
+	itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + "tutItem");
 	}
 }
 
