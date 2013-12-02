@@ -18,7 +18,7 @@ public class TutBlock extends Block {
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(2F);
 		this.setResistance(15F);
-		this.setStepSound(Block.soundGlassFootstep);
+		this.setStepSound(Block.soundMetalFootstep);
 		this.setLightValue(1F);
 	}
 	
